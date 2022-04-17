@@ -1,0 +1,10 @@
+.footer{
+    background-color: rgb(21, 21, 66);
+    height: 200px;
+}
+
+.icons-footer{
+    justify-content: center;
+    font-size: 30px;
+    display: flex; 
+}

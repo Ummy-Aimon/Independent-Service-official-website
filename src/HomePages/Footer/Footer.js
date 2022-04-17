@@ -1,10 +1,31 @@
 import React from 'react';
+import { FaYoutube } from 'react-icons/fa';
+import { BsFacebook } from 'react-icons/bs';
+import { AiFillInstagram } from 'react-icons/ai';
+import { BsTwitter } from 'react-icons/bs';
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <div>
-        <h1>copyeth</h1>    
-        </div>
+        <div className="footer">         
+         <hr></hr>     
+        <p className="text-center fw-bold text-white">All Rights Reserved © 2020 Dr. Mike</p> 
+        <div className="icons-footer">
+                      <div className="icon">
+                      <FaYoutube></FaYoutube>
+                      </div>
+                      <div className="icon">
+                      <BsFacebook></BsFacebook>
+                      </div>
+                      <div className="icon">
+                      <AiFillInstagram></AiFillInstagram>
+                      </div>
+                      <div className="icon">
+                      < BsTwitter></BsTwitter> 
+                      </div>   
+                  </div>
+        
+        </div> 
     );
 };
 
