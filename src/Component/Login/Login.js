@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {FcGoogle} from 'react-icons/fc'
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../FireBase-init';
 import './Login.css'
 
 const Login = () => {
     const[email,setEmail] = useState('')
     const[password,setPassword] = useState('')
-
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-      ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
+    const [sendPasswordResetEmail, loading2, error2] = useSendPasswordResetEmail(
+        auth
+      );
+const [signInWithEmailAndPassword,user,loading,error] = useSignInWithEmailAndPassword(auth);
       const navigate= useNavigate()
       let location = useLocation();
  
@@ -35,6 +33,10 @@ const Login = () => {
 if(user){
 navigate(from, { replace: true })
 }
+if(user1){
+    navigate(from, { replace: true })
+    }
+
 
      const handleSignIN =(e) =>{
         e.preventDefault()
@@ -44,6 +46,20 @@ navigate(from, { replace: true })
           if (loading) {
             return 
           }
+
+          if (error1) {
+            return   
+          }
+          if (loading1) {
+            return 
+          }
+          if (error2) {
+            return   
+          }
+          if (loading2) {
+            return 
+          }
+
         signInWithEmailAndPassword(email,password)
      }
     return (
@@ -57,6 +73,15 @@ navigate(from, { replace: true })
   <Form.Group className="mb-3" controlId="formGroupPassword">
     <Form.Label className="fw-bold">Password</Form.Label>
     <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required/>
+    <Button onClick={async () => {
+          await sendPasswordResetEmail(email);
+          alert('Sent email');
+        }} variant="link" type="submit">Forget password?</Button>
+    <p className="text-danger">{error2?.message}</p>
+ {
+     loading2 && <p className="text-info">Loading...</p>
+ }
+    {/* <Link className="mt-5 text-decoration-none" to="">ForgetPassword?</Link> */}
   </Form.Group>
   
  <p className="text-danger">{error?.message}</p>
@@ -69,10 +94,13 @@ navigate(from, { replace: true })
 </p>
   <Button type="submit" className="w-100 fw-bold fs-4" variant="info">Submit</Button>
   <br></br> <br></br>
-  <div className="button">
-  <button type= "submit" className="button"> 
+  
+  <button onClick={() => signInWithGoogle()} type= "submit" className="button"> 
   <FcGoogle> </FcGoogle> Continue With Google </button>
-  </div>
+  <p className="text-danger">{error1?.message}</p>
+ {
+     loading1 && <p className="text-info">Loading...</p>
+ }
 </Form>
 
         </div>
