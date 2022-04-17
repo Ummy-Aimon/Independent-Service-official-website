@@ -8,8 +8,10 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className="footer">         
-         <hr></hr>     
-        <p className="text-center fw-bold text-white">All Rights Reserved © 2020 Dr. Mike</p> 
+         <hr className="text-white"></hr>
+         <div className="">    
+        <p className="text-center fw-bold text-white ">All Rights Reserved © 2020 Dr. Mike</p> 
+        
         <div className="icons-footer">
                       <div className="icon">
                       <FaYoutube></FaYoutube>
@@ -22,6 +24,7 @@ const Footer = () => {
                       </div>
                       <div className="icon">
                       < BsTwitter></BsTwitter> 
+                      </div>
                       </div>   
                   </div>
         
