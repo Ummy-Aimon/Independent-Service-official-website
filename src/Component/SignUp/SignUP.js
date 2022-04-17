@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../FireBase-init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import './SignUp.css'
 const SignUP = () => {
     // State
     const[name,setName] = useState('')
@@ -53,7 +54,7 @@ createUserWithEmailAndPassword(email,password)
 }
 
     return (
-        <div>
+        <div className="signup">
            <h1 className="text">Sign Up</h1>
            <Form onSubmit={handleCreateUser} className="w-50 m-auto">  
            <Form.Group className="mb-3" controlId="formGroupEmail"/>
@@ -61,15 +62,15 @@ createUserWithEmailAndPassword(email,password)
     <Form.Control onBlur={ handleNameBlur} type="text" placeholder="Enter Your Name" required/>   
   <Form.Group className="mb-3" controlId="formGroupEmail">
     <Form.Label className="fw-bold">Email address</Form.Label>
-    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" />
+    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="formGroupPassword">
     <Form.Label className="fw-bold"> Password </Form.Label>
-    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" />
+    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
 </Form.Group>
     <Form.Group className="mb-3" controlId="formGroupPassword">
     <Form.Label className="fw-bold"> Comfirm Password</Form.Label>
-    <Form.Control onBlur={handleConfirmPasswordBlur} type="password" placeholder="Confirm Password"/>
+    <Form.Control onBlur={handleConfirmPasswordBlur} type="password" placeholder="Confirm Password" required/>
   </Form.Group>
   <p className="text-danger">{error}</p>
   <p className="fs-5 fw-bold">

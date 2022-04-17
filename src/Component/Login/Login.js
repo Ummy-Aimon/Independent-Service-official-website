@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {FcGoogle} from 'react-icons/fc'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../FireBase-init';
+import './Login.css'
 
 const Login = () => {
     const[email,setEmail] = useState('')
@@ -46,9 +47,8 @@ navigate(from, { replace: true })
         signInWithEmailAndPassword(email,password)
      }
     return (
-        <div>
-        
-           <h1 className="mt-5 text-danger p-2 text-center">Please Login</h1>
+        <div className="login">
+           <h1 className="text">Please Login</h1>
            <Form onSubmit={handleSignIN} className="w-50 m-auto">     
   <Form.Group className="mb-3" controlId="formGroupEmail">
     <Form.Label className="fw-bold">Email address</Form.Label>
@@ -64,12 +64,15 @@ navigate(from, { replace: true })
      loading && <p className="text-info">Loading...</p>
  }
     
-  <p className="fs-5 fw-bold">
-     <Link className="text-secondary text-decoration-none" to="/signup">Create an account?</Link>
+  <p className="text1"> 
+  Sign Up For Doctor Mike's Newsletter? <Link className="text-secondary text-decoration-none" to="/signup">Create an account</Link>
 </p>
   <Button type="submit" className="w-100 fw-bold fs-4" variant="info">Submit</Button>
   <br></br> <br></br>
-  <Button type= "submit" className="w-100 fw-bold fs-4 text-dark" variant="outline-info"> <FcGoogle></FcGoogle> Continue With Google</Button>
+  <div className="button">
+  <button type= "submit" className="button"> 
+  <FcGoogle> </FcGoogle> Continue With Google </button>
+  </div>
 </Form>
 
         </div>

@@ -1,0 +1,18 @@
+.login{
+    min-height:500px;
+}
+
+.text1{
+   color: rgb(21, 21, 66); 
+   font-weight: 700;;
+}
+.button{
+    font-size:20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: 700;
+    border-radius: 8px;
+    background-color:rgb(21, 21, 66);
+    color: white;
+}
