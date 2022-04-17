@@ -5,20 +5,25 @@ import './Header.css'
 const Header = () => {
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
+            <Navbar collapseOnSelect expand="lg" sticky="top" bg="info" variant="dark">
   <Container>
   <Navbar.Brand href="#home">Dr. Malik</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-    <Link className="header" to='/'>Home</Link>
-      <Link className="header" to='/about'>
+    <Nav.Link as={Link} to='/'>Home</Nav.Link>
+      <Nav.Link href="#about">About</Nav.Link>
+      <Nav.Link href="#service">Service</Nav.Link>
+      <Nav.Link href="#Contact">Contact Us</Nav.Link>
+      
+    {/* <Link className="header" to='/'>Service</Link>
+      <Link className="header" to=''>
         About
-      </Link>
-      <Link className="header" to='/service'>Service</Link>
-      <Link className="header" to='/contact'>
+      </Link> */}
+      {/* <Link className="header" to=''>Service</Link>
+      <Link className="header" to=''>
         Contact Us
-      </Link>
+      </Link> */}
       {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

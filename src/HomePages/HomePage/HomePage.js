@@ -1,4 +1,5 @@
 import React from 'react';
+import About from '../About/About';
 import Banner from '../BannerPage/Banner';
 import Header from '../Header/Header';
 // import Header from './Header';
@@ -6,8 +7,8 @@ import Header from '../Header/Header';
 const HomePage = () => {
     return (
         <div>
-          <Header></Header>
           <Banner></Banner>
+          <About></About>
         </div>
     );
 };
