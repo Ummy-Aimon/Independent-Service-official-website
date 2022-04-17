@@ -1,0 +1,10 @@
+.image{
+    justify-content: center;
+    align-items: center;   
+}
+.text{
+    font-size:60px;
+    text-align: center;
+    color:rgb(21, 21, 66);
+    margin-top: 20px;
+}
