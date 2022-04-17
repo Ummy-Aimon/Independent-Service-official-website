@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../FireBase-init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import './SignUp.css'
 const SignUP = () => {
     // State
@@ -12,8 +12,8 @@ const SignUP = () => {
     const[confirmpassword,setConfirmPassword] = useState('')
     const[error,setError] = useState('')
     const navigate= useNavigate()
-
     const[createUserWithEmailAndPassword,user]= useCreateUserWithEmailAndPassword(auth)
+   
 
 // Event Blur 
 if (error){
@@ -51,6 +51,8 @@ if(password.length <6){
     return;
 }
 createUserWithEmailAndPassword(email,password)
+
+
 }
 
     return (
@@ -64,6 +66,7 @@ createUserWithEmailAndPassword(email,password)
     <Form.Label className="fw-bold">Email address</Form.Label>
     <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required/>
   </Form.Group>
+  
   <Form.Group className="mb-3" controlId="formGroupPassword">
     <Form.Label className="fw-bold"> Password </Form.Label>
     <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
@@ -71,7 +74,9 @@ createUserWithEmailAndPassword(email,password)
     <Form.Group className="mb-3" controlId="formGroupPassword">
     <Form.Label className="fw-bold"> Comfirm Password</Form.Label>
     <Form.Control onBlur={handleConfirmPasswordBlur} type="password" placeholder="Confirm Password" required/>
+
   </Form.Group>
+
   <p className="text-danger">{error}</p>
   <p className="fs-5 fw-bold">
     Already Have a acount ? <Link className="text-secondary text-decoration-none" to="/login">Login</Link>
