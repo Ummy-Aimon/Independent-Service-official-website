@@ -11,8 +11,7 @@ const Login = () => {
     const[password,setPassword] = useState('')
     const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
     const [sendPasswordResetEmail, loading2, error2] = useSendPasswordResetEmail(
-        auth
-      );
+        auth );
 const [signInWithEmailAndPassword,user,loading,error] = useSignInWithEmailAndPassword(auth);
       const navigate= useNavigate()
       let location = useLocation();
