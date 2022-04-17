@@ -33,7 +33,7 @@ const Header = () => {
       </NavDropdown> */}
     </Nav>
     <Nav>
-      <Link className="header" to='/sign up'>Sign Up</Link>
+      <Link className="header" to='/signup'>Sign Up</Link>
       <Link className="header" to='/login'>
         Login
       </Link>
