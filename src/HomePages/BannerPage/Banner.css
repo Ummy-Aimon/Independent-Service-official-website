@@ -1,0 +1,14 @@
+.banner{
+    background-color: rgb(244, 244, 248);
+    height: 600px;
+    margin-top: 20px;
+}
+
+.icons{
+    font-size: 30px;
+    display: flex;     
+}
+.icon{
+    margin: 8px;
+    color: rgb(202, 121, 121)
+}
