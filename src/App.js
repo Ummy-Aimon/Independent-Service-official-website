@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <Header></Header>
      <Routes>
-       <Route path= '/login' element={<Login></Login>}></Route>
+
        <Route path= '/' element={<HomePage></HomePage>}></Route>
        <Route path= '/home' element={<HomePage></HomePage>}></Route>
        <Route path="/signup" element={<SignUP></SignUP>}></Route>
@@ -31,6 +31,7 @@ function App() {
            <CheckOut></CheckOut>
          </RequireAuth>
        }></Route>
+       <Route path='/login'element={<Login></Login>}></Route>
       
        <Route path="*" element={<NotFoundPage></NotFoundPage>}>
        </Route>

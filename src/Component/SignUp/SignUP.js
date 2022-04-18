@@ -37,7 +37,7 @@ const handleConfirmPasswordBlur = (e) =>{
     setConfirmPassword(e.target.value)
 }
  if(user){
-     navigate('/')
+    navigate('/')
  }
 
 const handleCreateUser =(e) =>{
