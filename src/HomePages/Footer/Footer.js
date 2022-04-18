@@ -6,11 +6,13 @@ import { BsTwitter } from 'react-icons/bs';
 import './Footer.css'
 
 const Footer = () => {
+    const today= new Date();
+    const year= today.getFullYear();
     return (
         <div className="footer">         
          <hr className="text-white"></hr>
          <div className="">    
-        <p className="text-center fw-bold text-white ">All Rights Reserved © 2020 Dr. Mike</p> 
+        <p className="text-center fw-bold text-white ">All Rights Reserved © {year} Dr. Mike</p> 
         
         <div className="icons-footer">
                       <div className="icon">
