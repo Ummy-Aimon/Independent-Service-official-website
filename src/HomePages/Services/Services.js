@@ -12,7 +12,7 @@ const[services,setService]=useState([])
      .then(data=>setService(data))
  },[])
     return (
-        <div>
+        <div id="services">
            <h1 className="text-center text-info fw-bold mb-5git">Service</h1>
            <div className="service-container">
            {

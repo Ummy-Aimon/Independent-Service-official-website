@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Service.css'
 
 const Service = (props) => {
     const{img,name,description,price}=props.service
+    const navlink= useNavigate()
     return (
         <div className="shadow p-3 mb-5 bg-body rounded ">
             {/* <Card style={{ width: '18rem' }}> */}
@@ -14,7 +16,7 @@ const Service = (props) => {
       {description.slice(0,160)}.......
     </Card.Text>
     <p className="text-secondary fw-bold">${price}</p>
-    <Button ype="submit" variant="primary">Read more</Button>
+    <Button onClick={()=>navlink("/servicedetail")} type="submit" variant="primary">Read more</Button>
   </Card.Body>
 {/* </Card> */}
         </div>

@@ -12,15 +12,15 @@ const Header = () => {
     }
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" sticky="top" bg="info" variant="dark">
+            <Navbar collapseOnSelect expand="lg"sticky="top" bg="info" variant="dark">
   <Container>
-  <Navbar.Brand href="#home">Dr. Malik</Navbar.Brand>
+  <Navbar.Brand href="#home">Dr.Mike</Navbar.Brand>
   <Navbar.Toggle  aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
     <Nav.Link as={Link} to='/'>Home</Nav.Link>
-      <Nav.Link href="#about">About</Nav.Link>
-      <Nav.Link href="#service">Service</Nav.Link>
+      <Nav.Link href="home#about">About</Nav.Link>
+      <Nav.Link href="home#services">Services</Nav.Link>
       <Nav.Link href="#Contact">Contact Us</Nav.Link>
       
     {/* <Link className="header" to='/'>Service</Link>
