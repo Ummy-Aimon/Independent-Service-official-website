@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../FireBase-init';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './SignUp.css'
+
 const SignUP = () => {
     // State
     const[name,setName] = useState('')
@@ -12,8 +13,8 @@ const SignUP = () => {
     const[confirmpassword,setConfirmPassword] = useState('')
     const[error,setError] = useState('')
     const navigate= useNavigate()
-    const[createUserWithEmailAndPassword,user]= useCreateUserWithEmailAndPassword(auth)
-   
+    const[createUserWithEmailAndPassword,user]= useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true})
+ 
 
 // Event Blur 
 if (error){
