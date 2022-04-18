@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AboutMe from './Component/AboutMe/AboutMe';
 import Blog from './Component/Blog/Blog';
 import CheckOut from './Component/CheckOut/CheckOut';
 
@@ -9,7 +10,7 @@ import NotFoundPage from './Component/NotFound/NotFound';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 
 import SignUP from './Component/SignUp/SignUP';
-import About from './HomePages/About/About';
+
 import Footer from './HomePages/Footer/Footer';
 import Header from './HomePages/Header/Header';
 // import Header from './HomePages/Header/Header';
@@ -34,7 +35,7 @@ function App() {
        }></Route>
        <Route path="/blog" element={<Blog></Blog>}></Route>
        <Route path='/login'element={<Login></Login>}></Route>
-      
+      <Route path="/about" element={<AboutMe></AboutMe>}></Route>
        <Route path="*" element={<NotFoundPage></NotFoundPage>}>
        </Route>
        </Routes>

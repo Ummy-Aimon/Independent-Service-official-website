@@ -49,6 +49,10 @@ const Header = () => {
         Login
       </Link>
 }
+<Link className="header" to='/about'>
+        About me
+      </Link>
+
     </Nav>
   </Navbar.Collapse>
   </Container>
