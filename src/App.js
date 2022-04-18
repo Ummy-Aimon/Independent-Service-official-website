@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Blog from './Component/Blog/Blog';
 import CheckOut from './Component/CheckOut/CheckOut';
 
 import Login from './Component/Login/Login';
@@ -31,6 +32,7 @@ function App() {
            <CheckOut></CheckOut>
          </RequireAuth>
        }></Route>
+       <Route path="/blog" element={<Blog></Blog>}></Route>
        <Route path='/login'element={<Login></Login>}></Route>
       
        <Route path="*" element={<NotFoundPage></NotFoundPage>}>
