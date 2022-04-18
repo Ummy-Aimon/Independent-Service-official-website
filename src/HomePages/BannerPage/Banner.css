@@ -12,3 +12,10 @@
     margin: 8px;
     color: rgb(202, 121, 121)
 }
+
+/*  */
+@media only screen and (max-width: 1200px){
+    .banner-img{
+        width: 100%;
+    }
+}
