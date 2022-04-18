@@ -24,6 +24,7 @@
 * npm run build
 * firebase init
 * firebase deploy
+* UseRedirect
 
 ## Learn More
 
