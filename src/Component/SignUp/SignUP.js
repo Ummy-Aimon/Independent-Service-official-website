@@ -52,7 +52,6 @@ if(password.length <6){
 }
 createUserWithEmailAndPassword(email,password)
 
-
 }
 
     return (

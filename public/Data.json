@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Covid 19, donated mask",
+      "description":"Dr. Mike donated $50,000 in masks to his local hospital and raised over $65,000 for the CDC Foundation.",
+      "price":  50000 ,
+      "img": "https://i.ibb.co/k1ghfcx/service3.jpg"
+      
+    },
+    {
+      "id": 2,
+      "name": "Established healthcare & medicine",
+     "description":"Dr. Mike continues to regularly contribute to esteemed publications including Women's Health, Men's Health, Reader's Digest, American Academy of Family Physicians Blog, and MedPageToday.presenting seminars and lectures for the TEDx Conference, Mayo Clinic, and many more.",
+     "price": 1000000,
+    "img": "https://i.ibb.co/SJpbVJ9/service1.jpg"
+     
+    },
+    {
+      "id": 3,
+      "name": "philanthropic organizations",
+      "description":"In 2015, Dr. Mike expanded his outreach when he launched his charity,philanthropic organizations including Stand Up 2 Cancer, AmeriCares, and the Susan G. Komen Foundation.",
+      "price": 200000,
+      "img": "https://i.ibb.co/TBXq36q/service.jpg"
+    
+    } 
+    
+  ]
