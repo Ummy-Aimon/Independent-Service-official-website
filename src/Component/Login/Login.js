@@ -4,6 +4,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {FcGoogle} from 'react-icons/fc'
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../FireBase-init';
+import { ToastContainer, toast } from 'react-toastify';
+
+  import 'react-toastify/dist/ReactToastify.css';
 import './Login.css'
 
 const Login = () => {
@@ -74,9 +77,16 @@ if(user1){
     <Form.Label className="fw-bold">Password</Form.Label>
     <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required/>
     <Button onClick={async () => {
-          await sendPasswordResetEmail(email);
-          alert('Sent email');
+      if(email){
+        await sendPasswordResetEmail(email);
+        toast('Sent email');
+      }
+      else{
+        toast('Please Enter Your Email')
+      }
+         
         }} variant="link" type="submit">Forget password?</Button>
+         <ToastContainer />
     <p className="text-danger">{error2?.message}</p>
  {
      loading2 && <p className="text-info">Loading...</p>
