@@ -12,7 +12,7 @@ const Banner = () => {
                <div className="row">
                    {/* <div className="bg-info"> */}
                    <div className="col-md-6">
-                  <h1 className="mt-5 fw-bold">Doctor Mike Varshavski - Official Website</h1>
+                  <h1 className="mt-5 fw-bold">Doctor Mike is Varshavski - Official Website</h1>
                   <p className="fs-5">Doctor Mike is an actively practicing Board Certified Family Medicine doctor. #1 health & lifestyle expert with 21,000,000+ followers.</p>
                   <div className="icons">
                       <div className="icon">
